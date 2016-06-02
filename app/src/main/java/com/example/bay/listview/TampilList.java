@@ -30,10 +30,11 @@ public class TampilList extends Activity {
             for (int i=0;i<length;i++) {
                 Person person = arrayList.get(i);
                 listPerson.add(person.getName());
+                listPerson.add(person.getAddress());
             }
         }
 
-        namaAdapter=new NamaAdapter(this, android.R.layout.simple_list_item_1,listPerson);
+        namaAdapter=new NamaAdapter(this, R.layout.layouts,listPerson);
         listView.setAdapter(namaAdapter);
     }
 }
